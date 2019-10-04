@@ -5,10 +5,14 @@ Language Understanding Evaluation benchmark for Chinese: datasets, baselines, co
 
 我们会选择一系列有一定代表性的任务对应的数据集，做为我们测试基准的数据集。这些数据集会覆盖不同的任务、数据量、任务难度。
 
+ChineseGLUE的定位
+---------------------------------------------------------------------
+为更好的服务中文语言理解、任务和产业界，做为通用语音模型测评的补充，通过完善中文语言理解基础设施的方式来促进中文语言模型的发展
+
 Why do we need a benchmark for Chinese lanague understand evaluation?
 
-#### 为什么我们需要一个中文任务的基准测试？ 
-
+为什么我们需要一个中文任务的基准测试？ 
+---------------------------------------------------------------------
 首先，中文是一个大语种，有其自身的特定、大量的应用。
 
     如中文使用人数近14亿，是联合国官方语言之一，产业界有大量的的朋友在做中文的任务。
@@ -27,10 +31,8 @@ Why do we need a benchmark for Chinese lanague understand evaluation?
      
      能缓解当前中文任务的一些问题，并促进相关应用的发展。
 
-#### ChineseGLUE的定位
-为更好的服务中文语言理解、任务和产业界，做为通用语音模型测评的补充，通过完善中文语言理解基础设施的方式来促进中文语言模型的发展
- 
-#### 中文任务的基准测试-内容体系
+中文任务的基准测试-内容体系 Contents
+--------------------------------------------------------------------
 Language Understanding Evaluation benchmark for Chinese(ChineseGLUE) got ideas from GLUE, which is a collection of 
 
 resources for training, evaluating, and analyzing natural language understanding systems. SuperGLUE consists of: 
@@ -60,7 +62,7 @@ each task will be evaluated and scored, a final score will also be available.
    You can use it for general purpose or domain adaption, or even for text generating. when you use for domain adaption, 
    you will able to select corpus you are interested in.
 
-Timeline:
+Timeline 时间计划:
 ---------------------------------------------------------------------
 2019-10-20 to 2019-12-31: beta version of ChineseGLUE
 
