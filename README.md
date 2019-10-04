@@ -35,7 +35,7 @@ Language Understanding Evaluation benchmark for Chinese(ChineseGLUE) got ideas f
 
 resources for training, evaluating, and analyzing natural language understanding systems. SuperGLUE consists of: 
 
-1）中文任务的基准测试，覆盖多个不同程度的语言任务 
+##### 1）中文任务的基准测试，覆盖多个不同程度的语言任务 
   
   A benchmark of several sentence or sentence pair language understanding tasks. 
 
@@ -43,17 +43,17 @@ resources for training, evaluating, and analyzing natural language understanding
  
  the end of 2019.
 
-2）公开的排行榜 
+##### 2）公开的排行榜 
   
   A public leaderboard for tracking performance. You will able to submit your prediction files on these tasks,
 
 each task will be evaluated and scored, a final score will also be available.
 
-3）基线模型，包含开始的代码、预训练模型 
+##### 3）基线模型，包含开始的代码、预训练模型 
   
   baselines for ChineseGLUE tasks. baselines will be available in TensorFlow,PyTorch,Keras and PaddlePaddle.
 
-4）语料库，用于语言建模、预训练或生成型任务 
+##### 4）语料库，用于语言建模、预训练或生成型任务 
 
    A huge amount of raw corpus for pre-train or language modeling. It will contains more than 10G corpus. 
 
@@ -67,6 +67,11 @@ Timeline:
 2020.1.1 to 2020-12-31: official version of ChineseGLUE
 
 2021.1.1 to 2021-12-31: super version of ChineseGLUE
+
+Contribution 贡献你的力量，从今天开始
+---------------------------------------------------------------------
+
+Share your data set with community or make a contribution today! Just send email to brightmart@otmail.com, or join QQ group: 836811304
 
 Reference:
 ---------------------------------------------------------------------
