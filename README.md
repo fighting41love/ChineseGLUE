@@ -3,6 +3,8 @@ Language Understanding Evaluation benchmark for Chinese: datasets, baselines, co
 
 中文语言理解测评基准，包括代表性的数据集、基准(预训练)模型、语料库、排行榜。  
 
+为更好的建设中文语言理解测评基准，本项目升级到<a href="https://github.com/chineseGLUE/chineseGLUE">chineseGLUE</a>
+
 我们会选择一系列有一定代表性的任务对应的数据集，做为我们测试基准的数据集。这些数据集会覆盖不同的任务、数据量、任务难度。
 
 ChineseGLUE的定位
