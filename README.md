@@ -1,7 +1,7 @@
 # ChineseGLUE
 Language Understanding Evaluation benchmark for Chinese: datasets, baselines, corpus and leaderboard
 
-中文语言理解测评基准，包括代表性的数据集、基准模型、语料库、排行榜。  
+中文语言理解测评基准，包括代表性的数据集、基准(预训练)模型、语料库、排行榜。  
 
 我们会选择一系列有一定代表性的任务对应的数据集，做为我们测试基准的数据集。这些数据集会覆盖不同的任务、数据量、任务难度。
 
@@ -57,10 +57,57 @@ each task will be evaluated and scored, a final score will also be available.
 
 ##### 4）语料库，用于语言建模、预训练或生成型任务 
 
-   A huge amount of raw corpus for pre-train or language modeling. It will contains more than 10G corpus. 
+   A huge amount of raw corpus for pre-train or language modeling research purpose. It will contains around 10G raw corpus in 2019; 
+   
+   In the first half year of 2020, it will include at least 30G raw corpus; By the end of 2020, we will include enough
+   
+   raw corpus, such as 100G, so big enough that you will need no more raw corpus for general purpose language modeling.
 
    You can use it for general purpose or domain adaption, or even for text generating. when you use for domain adaption, 
    you will able to select corpus you are interested in.
+
+数据集介绍与下载
+--------------------------------------------------------------------
+##### 1. LCQMC 口语化描述的语义相似度任务
+输入是两个句子，输出是0或1。其中0代表语义不相似，1代表语义相似。
+
+        数据量：训练集(238,766)，验证集(8,802)，测试集(12,500)
+        例子： 
+         1.聊天室都有哪些好的 [分隔符] 聊天室哪个好 [分隔符] 1
+         2.飞行员没钱买房怎么办？ [分隔符] 父母没钱买房子 [分隔符] 0
+
+##### 2. XNLI 语言推断任务
+跨语言理解的数据集，给定一个前提和假设，判断这个假设与前提是否具有蕴涵、对立、中性关系。
+                
+        数据量：训练集(392,703)，验证集(？)，测试集(？)
+        例子： 
+         1.从 概念 上 看 , 奶油 收入 有 两 个 基本 方面 产品 和 地理 .[分隔符] 产品 和 地理 是 什么 使 奶油 抹 霜 工作 . [分隔符]	neutral
+         2.我们 的 一个 号码 会 非常 详细 地 执行 你 的 指示 [分隔符] 我 团队 的 一个 成员 将 非常 精确 地 执行 你 的 命令	[分隔符] entailment
+        
+        原始的XNLI覆盖15种语言（含低资源语言）。我们选取其中的中文，并将做格式转换，使得非常容易进入训练和测试阶段。
+
+
+##### 3.TNEWS 今日头条中文新闻（短文本）分类
+        
+        数据量：训练集(266,000)，验证集(57,000)，测试集(57,000)
+        例子：
+        6552431613437805063_!_102_!_news_entertainment_!_谢娜为李浩菲澄清网络谣言，之后她的两个行为给自己加分_!_佟丽娅,网络谣言,快乐大本营,李浩菲,谢娜,观众们
+        每行为一条数据，以_!_分割的个字段，从前往后分别是 新闻ID，分类code，分类名称，新闻字符串（仅含标题），新闻关键词
+
+##### 4. 更多数据集添加中，Comming soon!
+
+更多数据集添加中，目标是8个覆盖不同任务的有代表性的数据集；如果你有定义良好的数据集，请与我们取得联系。
+
+##### 数据集下载 <a href="https://storage.googleapis.com/chineseglue/chineseGLUEdatasets.v0.0.1.zip">整体下载</a>
+
+或使用命令：
+
+    wget https://storage.googleapis.com/chineseglue/chineseGLUEdatasets.v0.0.1.zip
+
+基准测评-排行榜
+---------------------------------------------------------------------
+TODO
+此处将会被指向到一个排行榜的网站地址
 
 Timeline 时间计划:
 ---------------------------------------------------------------------
@@ -73,10 +120,18 @@ Timeline 时间计划:
 Contribution 贡献你的力量，从今天开始
 ---------------------------------------------------------------------
 
-Share your data set with community or make a contribution today! Just send email to brightmart@otmail.com, or join QQ group: 836811304
+Share your data set with community or make a contribution today! Just send email to chineseGLUE@163.com, 
+
+or join QQ group: 836811304
 
 Reference:
 ---------------------------------------------------------------------
 1、<a href="https://openreview.net/pdf?id=rJ4km2R5t7">GLUE: A Multi-Task Benchmark and Analysis Platform for Natural Language Understanding</a>
 
 2、<a href="https://w4ngatang.github.io/static/papers/superglue.pdf">SuperGLUE: A Stickier Benchmark for General-Purpose Language Understanding Systems</a>
+
+3、<a href="https://www.aclweb.org/anthology/C18-1166.pdf">LCQMC: A Large-scale Chinese Question Matching Corpus</a>
+
+4、<a href="https://arxiv.org/pdf/1809.05053.pdf">XNLI: Evaluating Cross-lingual Sentence Representations</a>
+
+5、<a href="https://github.com/fate233/toutiao-text-classfication-dataset">TNES: toutiao-text-classfication-dataset</a>
